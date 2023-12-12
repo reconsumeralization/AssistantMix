@@ -25,6 +25,9 @@ Issue management features allow users to create, update, and delete issues. It a
 
 ## Getting Started
 
+### Configuring and Using the Recurring Issue Management System
+To configure the recurring issue management system, modify the settings in the `recurring_issues` section of the `sweep.yml` file. This section allows users to define repeat schedules, specify recurrence patterns, and configure notification settings. For detailed instructions on setting up, customizing, and using the recurring issue management system, refer to the system documentation provided in the `sweep.yml` file.
+
 To get started with the project, clone the repository and install the required dependencies.
 
 ```bash
@@ -142,6 +145,16 @@ logger.addHandler(handler)
 ```
 
 ## Testing
+
+## Reporting System Testing
+
+The project includes test cases for the reporting system.
+
+To run the tests, use the following command:
+
+```bash
+python -m unittest discover -s tests
+```
 
 The project includes test cases for the AI model and the assistant. To run the tests, use the following command:
 

@@ -1,7 +1,7 @@
 # run.py
 
 import config
-from utilities import logger, check_run_status
+from utilities import logger, check_run_status, JiraIntegration, TrelloIntegration
 from assistant import Assistant
 from thread import Thread
 
