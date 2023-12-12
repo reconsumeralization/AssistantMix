@@ -17,12 +17,9 @@ class FunctionCaller:
         Define a function for issue management.
         """
         if not self.enabled:
-            logger.warning("Function Caller is not enabled. Cannot define function.")
-            return
-
-        self.issue_management_functions = self.issue_management_functions or {}
-        self.issue_management_functions[function_name] = function_body
-        logger.info(f"Issue management function '{function_name}' defined.")
+            self.issue_management_functions = self.issue_management_functions or {}
+            self.issue_management_functions[function_name] = function_body
+            logger.info(f"Issue management function '{function_name}' defined.")
 
     def suggest_function(self, context):
         """
@@ -45,12 +42,6 @@ class FunctionCaller:
         Call a previously defined issue management function with the given arguments.
         """
         if not self.enabled:
-        self.functions = self.functions or {}
-        self.functions[function_name] = function_body
-        logger.info(f"Function '{function_name}' defined.")
-        self.functions = self.functions or {}
-        self.functions[function_name] = function_body
-        logger.info(f"Function '{function_name}' defined.")
             logger.warning("Function Caller is not enabled. Cannot call function.")
             return None
 
