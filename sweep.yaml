@@ -1,0 +1,19 @@
+import yaml
+
+def add_rules_to_sweep_yaml(file_path, rules):
+    # Read the contents of the sweep.yaml file
+    with open(file_path, 'r') as file:
+        yaml_data = yaml.safe_load(file)
+
+    # Add the requested rules to the rules section
+    if 'rules' not in yaml_data:
+        yaml_data['rules'] = []
+
+    yaml_data['rules'].extend(rules)
+
+    # Convert the modified dictionary back into YAML format
+    modified_yaml = yaml.dump(yaml_data)
+
+    # Write the modified YAML contents back to the sweep.yaml file
+    with open(file_path, 'w') as file:
+        file.write(modified_yaml)
