@@ -28,4 +28,11 @@ class ErrorHandler:
         logger.error(f"An error occurred: {error}")
 
 # Initialize the error handler
+
+    def log_resolution_action(self, issue_number, action):
+        """
+        Log the resolution action with the given issue number and action taken.
+        """
+        log_message = f"Resolution action taken on issue #{issue_number}: {action}"
+        logger.info(log_message)
 error_handler = ErrorHandler()

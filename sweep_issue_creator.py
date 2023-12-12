@@ -1,6 +1,8 @@
 import json
 
 import requests
+from github_api import get_github_issue_assignee
+from github_api import update_github_issue_assignee
 
 
 def create_sweep_issue(title, description, labels, assignee=None, mapping_rules=None, filtering_criteria=None):
@@ -53,7 +55,12 @@ def create_sweep_issue(title, description, labels, assignee=None, mapping_rules=
         pass
     if sweep_status_update is None:
         # Handle unsupported GitHub issue actions
-        pass
+    # Handle sweep issue assignee synchronization when assignee of GitHub issue changes
+    if github_issue_action == 'assignee_changed':
+        github_assignee = get_github_issue_assignee(issue_number)
+        if github_assignee:
+            update_github_issue_assignee(sweep_issue_id, github_assignee)
+    pass
     # Handle the case when the github_issue_action is not mapped to any status update
     if sweep_status_update is None:
         # Handle unsupported GitHub issue actions

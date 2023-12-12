@@ -45,6 +45,12 @@ class FunctionCaller:
         Call a previously defined issue management function with the given arguments.
         """
         if not self.enabled:
+        self.functions = self.functions or {}
+        self.functions[function_name] = function_body
+        logger.info(f"Function '{function_name}' defined.")
+        self.functions = self.functions or {}
+        self.functions[function_name] = function_body
+        logger.info(f"Function '{function_name}' defined.")
             logger.warning("Function Caller is not enabled. Cannot call function.")
             return None
 
