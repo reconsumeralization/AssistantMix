@@ -13,11 +13,38 @@ branch: 'main'
 # By default Sweep will read the logs and outputs from your existing Github Actions. To disable this, set this to false.
 gha_enabled: True
 
+recurring_issues:
+  repeat_schedules:
+  - issue_type: <issue_type>
+    recurrence_pattern: <recurrence_pattern>
+    notification_settings:
+      channels: <notification_channels>
+      lead_time_before_due: <lead_time>
+
 # This is the description of your project. It will be used by sweep when creating PRs. You can tell Sweep what's unique about your project, what frameworks you use, or anything else you want.
 #
 # Example:
 #
 # description: sweepai/sweep is a python project. The main api endpoints are in sweepai/api.py. Write code that adheres to PEP8.
+recurring_issues:
+  description: 'Specify configurations for recurring issues.'
+  - setting_up_repeats: 'Specify how to set up repeat schedules.'
+  - customization_of_recurrence: 'Specify customization of recurrence patterns.'
+  - notification_settings: 'Specify notification settings.'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 description: ''
 
 # This sets whether to create pull requests as drafts. If this is set to True, then all pull requests will be created as drafts and GitHub Actions will not be triggered.
