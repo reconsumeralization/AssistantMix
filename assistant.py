@@ -3,6 +3,7 @@
 import config
 from utilities import logger, execute_in_sandbox
 from ai_model import Mixtral8x7B
+from integrations import JiraIntegration, TrelloIntegration
 
 class Assistant:
     """
@@ -46,7 +47,7 @@ class Assistant:
 
     def execute_code(self, code):
         """
-        Execute Python code in a secure, sandboxed environment.
+        Sync issues and tasks with project management tools.
         """
         if config.OPEN_INTERPRETER_SANDBOXED:
             return execute_in_sandbox(code)

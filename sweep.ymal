@@ -3,7 +3,17 @@
 
 # This setting contains a list of rules that Sweep will check for. If any of these rules are broken in a new commit, Sweep will create an pull request to fix the broken rule.
 rules:
+  exceptions:
+    - name: "Exception 1"
+      description: "Description of exception 1"
+    - name: "Exception 2"
+      description: "Description of exception 2"
+- "Report bugs, suggest improvements, and provide general feedback through the feedback mechanism."
+- "Regularly review and assess the effectiveness of issue management features"
 - "All new business logic should have corresponding unit tests."
+- "Regularly review and assess the effectiveness of issue management features"
+- "Identify areas for improvement based on user feedback and data analysis"
+- "Prioritize feature development and optimization efforts based on user needs and impact"
 - "Refactor large functions to be more modular."
 - "Add docstrings to all functions and file headers."
 
@@ -13,15 +23,32 @@ branch: 'main'
 # By default Sweep will read the logs and outputs from your existing Github Actions. To disable this, set this to false.
 gha_enabled: True
 
+recurring_issues:
+  repeat_schedules:
+  - issue_type: <issue_type>
+    recurrence_pattern: <recurrence_pattern>
+    notification_settings:
+      channels: <notification_channels>
+      lead_time_before_due: <lead_time>
+
 # This is the description of your project. It will be used by sweep when creating PRs. You can tell Sweep what's unique about your project, what frameworks you use, or anything else you want.
 #
 # Example:
 #
 # description: sweepai/sweep is a python project. The main api endpoints are in sweepai/api.py. Write code that adheres to PEP8.
-description: ''
 
 # This sets whether to create pull requests as drafts. If this is set to True, then all pull requests will be created as drafts and GitHub Actions will not be triggered.
 draft: False
+
+# Configuration for mapping rules from GitHub issue fields to Sweep issue fields
+mapping_rules:
+  manual_overrides:
+    title: 'override_title_field'
+    description: 'override_description_field'
+    labels: 'override_tags_field'
+  title: 'name'
+  description: 'description'
+  labels: 'tags'
 
 # This is a list of directories that Sweep will not be able to edit.
 blocked_dirs: []
@@ -37,6 +64,8 @@ docs: []
 # Sandbox executes commands in a sandboxed environment to validate code changes after every edit to guarantee pristine code. For more details, see the Sandbox page.
 sandbox:
   install:
+    # Configuration for filtering criteria for Sweep issue creation
+    - filtering_criteria: ...
     - trunk init
   check:
     - trunk fmt {file_path} || return 0
