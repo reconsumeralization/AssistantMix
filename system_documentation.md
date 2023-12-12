@@ -52,6 +52,12 @@ The system's external dependencies are documented in `requirements.txt`.
 
 The system includes test cases for the AI model and the Assistant. For more details, refer to `test_ai_model.py` and `test_assistant.py`.
 
+## Reporting System
+
+The reporting system provides comprehensive analytics on issue data.
+
+It includes the ability to track trends, analyze issue resolution times, identify recurring issues, and generate customizable reports and dashboards. This functionality can be accessed through the `reporting.py` file and relevant configuration settings in `config.py`.
+
 ## Further Reading
 
 For more information about the system, refer to `README.md`.
