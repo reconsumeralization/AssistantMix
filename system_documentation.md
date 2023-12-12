@@ -52,11 +52,15 @@ The system's external dependencies are documented in `requirements.txt`.
 
 The system includes test cases for the AI model and the Assistant. For more details, refer to `test_ai_model.py` and `test_assistant.py`.
 
-## Reporting System
+## Recurring Issue Management
+This section documents the new features for managing recurring issues.
 
-The reporting system provides comprehensive analytics on issue data.
+### Functionality
+The recurring issue management system allows users to create and manage recurring Sweep issues. It provides options for setting up repeat schedules for specific issues or groups of issues and customizing recurrence patterns and notification settings. The system is highly customizable and configurable to suit individual preferences.
 
-It includes the ability to track trends, analyze issue resolution times, identify recurring issues, and generate customizable reports and dashboards. This functionality can be accessed through the `reporting.py` file and relevant configuration settings in `config.py`.
+### Configuration and Usage
+To configure the recurring issue management system, modify the settings in the `recurring_issues` section of the `sweep.yml` file. This section allows users to define repeat schedules, specify recurrence patterns, and configure notification settings. For instructions on how to use the recurring issue management system, refer to the system documentation provided in the `sweep.yml` file.
+
 
 ## Further Reading
 
