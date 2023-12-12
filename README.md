@@ -8,6 +8,11 @@ Welcome to our advanced AI development ecosystem, featuring the formidable Mixtr
 - Tool Access
 - Persistent Conversations
 - File Support
+- Issue Management
+
+## Issue Management Features
+
+Issue management features allow users to create, update, and delete issues. It also provides the functionality to list all existing issues and retrieve specific issues based on user-defined criteria. Users can effectively utilize the issue management feature to track and address software bugs, feature requests, and other project-related tasks.
 - API Extensibility
 
 ## Primary Components
@@ -20,10 +25,13 @@ Welcome to our advanced AI development ecosystem, featuring the formidable Mixtr
 
 ## Getting Started
 
+### Configuring and Using the Recurring Issue Management System
+To configure the recurring issue management system, modify the settings in the `recurring_issues` section of the `sweep.yml` file. This section allows users to define repeat schedules, specify recurrence patterns, and configure notification settings. For detailed instructions on setting up, customizing, and using the recurring issue management system, refer to the system documentation provided in the `sweep.yml` file.
+
 To get started with the project, clone the repository and install the required dependencies.
 
 ```bash
-git clone https://github.com/your-repo/advanced-ai-development-ecosystem.git
+git clone https://github.com/reconsumeralization/AssistantMix/advanced-ai-development-ecosystem.git
 cd advanced-ai-development-ecosystem
 pip install -r requirements.txt
 ```
@@ -72,6 +80,10 @@ LOGGING_LEVEL = 'INFO'  # Options: DEBUG, INFO, WARNING, ERROR, CRITICAL
 ```
 
 ## Usage
+
+### Contributing to Issue Management Optimization
+
+Contributions to the improvement and optimization of the issue management features are welcome! Please refer to our [Contributing Guide](CONTRIBUTING.md) for details on the process for submitting changes related to issue management.
 
 The main components of the project are the AI model, the assistant, and the thread. You can customize the AI model's characteristics, equip the assistant with tools, and initiate threads with initial messages to commence a conversation.
 
@@ -145,6 +157,16 @@ logger.addHandler(handler)
 ```
 
 ## Testing
+
+## Reporting System Testing
+
+The project includes test cases for the reporting system.
+
+To run the tests, use the following command:
+
+```bash
+python -m unittest discover -s tests
+```
 
 The project includes test cases for the AI model and the assistant. To run the tests, use the following command:
 

@@ -18,6 +18,43 @@ The AI Assistant is a specialized AI entity tailored for specific tasks. It is p
 
 ### Thread
 
+### Issue Management
+
+The issue management feature allows users to create, update, and delete issues. It also provides the functionality to list all existing issues and retrieve specific issues based on user-defined criteria. Users can effectively utilize the issue management feature to track and address software bugs, feature requests, and other project-related tasks.
+
+#### Examples
+
+1. Creating a New Issue:
+   ```
+   issue_manager.create_issue(title, description, assignee)
+   ```
+
+2. Updating an Issue:
+   ```
+   issue_manager.update_issue(issue_id, new_status)
+   ```
+
+3. Deleting an Issue:
+   ```
+   issue_manager.delete_issue(issue_id)
+   ```
+
+4. Retrieving All Issues:
+   ```
+   issues = issue_manager.list_issues()
+   ```
+
+5. Retrieving Specific Issues:
+   ```
+   issue = issue_manager.get_issue(issue_id)
+   ```
+
+#### Best Practices
+
+- Regularly review and assess the effectiveness of the issue management features.
+- Identify areas for improvement based on user feedback and data analysis.
+- Prioritize feature development and optimization efforts based on user needs and impact.
+
 A Thread represents a conversation session, storing messages for future reference. Threads can be created with initial messages to commence a conversation. For more details, refer to `thread.py`.
 
 ### Run
@@ -65,6 +102,16 @@ The system's external dependencies are documented in `requirements.txt`.
 ## Testing
 
 The system includes test cases for the AI model and the Assistant. For more details, refer to `test_ai_model.py` and `test_assistant.py`.
+
+## Recurring Issue Management
+This section documents the new features for managing recurring issues.
+
+### Functionality
+The recurring issue management system allows users to create and manage recurring Sweep issues. It provides options for setting up repeat schedules for specific issues or groups of issues and customizing recurrence patterns and notification settings. The system is highly customizable and configurable to suit individual preferences.
+
+### Configuration and Usage
+To configure the recurring issue management system, modify the settings in the `recurring_issues` section of the `sweep.yml` file. This section allows users to define repeat schedules, specify recurrence patterns, and configure notification settings. For instructions on how to use the recurring issue management system, refer to the system documentation provided in the `sweep.yml` file.
+
 
 ## Further Reading
 
