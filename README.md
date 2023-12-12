@@ -137,6 +137,16 @@ logger.addHandler(handler)
 
 ## Testing
 
+## Reporting System Testing
+
+The project includes test cases for the reporting system.
+
+To run the tests, use the following command:
+
+```bash
+python -m unittest discover -s tests
+```
+
 The project includes test cases for the AI model and the assistant. To run the tests, use the following command:
 
 ```bash

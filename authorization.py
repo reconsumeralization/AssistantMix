@@ -2,6 +2,8 @@
 
 import config
 from utilities import logger
+from reporting import Reporting
+from config import *
 
 class Authorization:
     """

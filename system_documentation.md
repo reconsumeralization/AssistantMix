@@ -61,6 +61,7 @@ The recurring issue management system allows users to create and manage recurrin
 ### Configuration and Usage
 To configure the recurring issue management system, modify the settings in the `recurring_issues` section of the `sweep.yml` file. This section allows users to define repeat schedules, specify recurrence patterns, and configure notification settings. For instructions on how to use the recurring issue management system, refer to the system documentation provided in the `sweep.yml` file.
 
+
 ## Further Reading
 
 For more information about the system, refer to `README.md`.
