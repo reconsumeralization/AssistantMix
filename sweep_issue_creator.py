@@ -1,4 +1,6 @@
 import json
+from github_api import get_github_issue_assignee
+from github_api import update_github_issue_assignee
 
 import requests
 from github_api import get_github_issue_assignee
@@ -27,7 +29,8 @@ def create_sweep_issue(title, description, labels, assignee=None, mapping_rules=
     # Apply mapping rules customization
     if mapping_rules is not None:
         for rule in mapping_rules:
-            # Apply the mapping rule to the payload
+            if rule['type'] in ['priority', 'label']:
+                payload[rule['type']] = rule['value']
 
     # Apply filtering criteria customization
     if filtering_criteria is not None:
@@ -40,7 +43,7 @@ def create_sweep_issue(title, description, labels, assignee=None, mapping_rules=
     response.raise_for_status()
 
     # Return the response
-    return response
+    return response.json()
 
 # Update the relevant files
 # sweep.ymal: Update the description field to include information about the Sweep issue creation feature

@@ -1,4 +1,19 @@
 name: Sweep Issue
+assignees: sweep-bot
+mapping_rules:
+  - type: priority
+    value: 1
+  - type: label
+    value: bug
+  - type: label
+    value: feature
+  - type: label
+    value: refactor
+  - type: label
+    value: test
+filtering_criteria:
+  - type: label
+    value: sweep
 title: 'Sweep: '
 description: For small bugs, features, refactors, and tests to be handled by Sweep, an AI-powered junior developer.
 labels: sweep

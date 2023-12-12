@@ -10,11 +10,14 @@ Welcome to our advanced AI development ecosystem, featuring the formidable Mixtr
 
 - AI Model Customization
 - Tool Access
-- Persistent Conversations
+- Persistentt Conversations
 - File Support
 - Issue Management
 
 ## Issue Management Features
+- Searching for Bugs, Features, Refactors, and Tests
+- Identifying and Reporting Issues
+- Creating Sweep issues using the newly created template
 
 Issue management features allow users to create, update, and delete issues. It also provides the functionality to list all existing issues and retrieve specific issues based on user-defined criteria. Users can effectively utilize the issue management feature to track and address software bugs, feature requests, and other project-related tasks.
 - API Extensibility
@@ -126,6 +129,7 @@ class Assistant:
 ```
 ## Providing Feedback
 
+Guidelines for Identifying and Reporting Issues
 Users can provide feedback, report bugs, suggest improvements, and provide general feedback through the following channels:
 - **Bug Reports:** Users can report bugs by sending an email to bugs@example.com or by creating an issue in the issue tracker.
 - **Improvement Suggestions:** Users can suggest improvements by creating an issue in the issue tracker or by sending an email to improvement@example.com.

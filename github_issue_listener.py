@@ -5,7 +5,7 @@ from sweep_issue_creator import create_sweep_issue, update_sweep_issue_assignee
 
 
 def listen_for_github_issue_events(issue_event_data):
-    # Extract necessary information from the GitHub issue event data
+    # Search for bugs, features, refactors, and tests throughout the project and create Sweep issues for the identified issues
     action = issue_event_data['action']
     issue_number = issue_event_data['issue']['number']
     assignee = issue_event_data['issue']['assignee']['login'] if 'assignee' in issue_event_data['issue'] else None
@@ -28,7 +28,7 @@ def listen_for_github_issue_events(issue_event_data):
         update_sweep_issue_assignee(issue_number, assignee_after)  # Call the update_sweep_issue_assignee function to synchronize the assignee
 
     if sweep_status_update:
-        # Update the status of the Sweep issue using the create_sweep_issue function
+        create_sweep_issue(issue_number, status=sweep_status_update)
         create_sweep_issue(issue_number, status=sweep_status_update)
     else:
         # Handle unsupported GitHub issue actions
