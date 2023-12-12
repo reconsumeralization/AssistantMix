@@ -1,5 +1,9 @@
 # Advanced AI Development Ecosystem
 
+## Automated Issue Resolution and Closure System
+
+The automated issue resolution and closure system is designed to automatically manage and close issues based on predefined criteria. It aims to streamline the resolution process and ensure that issues are efficiently handled without manual intervention.
+
 Welcome to our advanced AI development ecosystem, featuring the formidable Mixtral-8x7B Large Language Model (LLM). This pretrained, generative Sparse Mixture of Experts surpasses Llama 2 70B across most benchmarks, highlighting its exceptional capabilities.
 
 ## Key Features
@@ -158,6 +162,11 @@ logger.addHandler(handler)
 
 ## Testing
 
+
+## Expected Behavior and Logs
+
+Upon the execution of the automated issue resolution and closure system, the expected behavior includes the automatic resolution and closure of issues based on the predefined criteria. Additionally, the system generates notification and audit logs to provide clear records of the automated resolution actions. These logs can be accessed to track the resolution process and review the actions taken by the system.
+
 ## Reporting System Testing
 
 The project includes test cases for the reporting system.
@@ -167,6 +176,7 @@ To run the tests, use the following command:
 ```bash
 python -m unittest discover -s tests
 ```
+
 
 The project includes test cases for the AI model and the assistant. To run the tests, use the following command:
 
