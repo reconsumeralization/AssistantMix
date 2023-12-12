@@ -3,6 +3,11 @@
 
 # This setting contains a list of rules that Sweep will check for. If any of these rules are broken in a new commit, Sweep will create an pull request to fix the broken rule.
 rules:
+  exceptions:
+    - name: "Exception 1"
+      description: "Description of exception 1"
+    - name: "Exception 2"
+      description: "Description of exception 2"
 - "Report bugs, suggest improvements, and provide general feedback through the feedback mechanism."
 - "Regularly review and assess the effectiveness of issue management features"
 - "All new business logic should have corresponding unit tests."
@@ -37,6 +42,10 @@ draft: False
 
 # Configuration for mapping rules from GitHub issue fields to Sweep issue fields
 mapping_rules:
+  manual_overrides:
+    title: 'override_title_field'
+    description: 'override_description_field'
+    labels: 'override_tags_field'
   title: 'name'
   description: 'description'
   labels: 'tags'
