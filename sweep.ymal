@@ -18,10 +18,16 @@ gha_enabled: True
 # Example:
 #
 # description: sweepai/sweep is a python project. The main api endpoints are in sweepai/api.py. Write code that adheres to PEP8.
-description: ''
+description: 'Configuration for the Sweep issue creation feature.'
 
 # This sets whether to create pull requests as drafts. If this is set to True, then all pull requests will be created as drafts and GitHub Actions will not be triggered.
 draft: False
+
+# Configuration for mapping rules from GitHub issue fields to Sweep issue fields
+mapping_rules:
+  title: 'name'
+  description: 'description'
+  labels: 'tags'
 
 # This is a list of directories that Sweep will not be able to edit.
 blocked_dirs: []
@@ -37,6 +43,8 @@ docs: []
 # Sandbox executes commands in a sandboxed environment to validate code changes after every edit to guarantee pristine code. For more details, see the Sandbox page.
 sandbox:
   install:
+    # Configuration for filtering criteria for Sweep issue creation
+    - filtering_criteria: ...
     - trunk init
   check:
     - trunk fmt {file_path} || return 0
