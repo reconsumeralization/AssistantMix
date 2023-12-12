@@ -44,3 +44,15 @@ def create_sweep_issue(title, description, labels, mapping_rules=None, filtering
 # sweep.ymal: Update the description field to include information about the Sweep issue creation feature
 
 # README.md: Add instructions for configuring and using the Sweep issue creation feature
+    # Handle the case when the github_issue_action is not mapped to any status update
+    if sweep_status_update is None:
+        # Handle unsupported GitHub issue actions
+        pass
+    # Handle the case when the github_issue_action is not mapped to any status update
+    if sweep_status_update is None:
+        # Handle unsupported GitHub issue actions
+        pass
+    # Handle the case when the github_issue_action is not mapped to any status update
+    if sweep_status_update is None:
+        # Handle unsupported GitHub issue actions
+        pass
