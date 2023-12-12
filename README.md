@@ -8,6 +8,11 @@ Welcome to our advanced AI development ecosystem, featuring the formidable Mixtr
 - Tool Access
 - Persistent Conversations
 - File Support
+- Issue Management
+
+## Issue Management Features
+
+Issue management features allow users to create, update, and delete issues. It also provides the functionality to list all existing issues and retrieve specific issues based on user-defined criteria. Users can effectively utilize the issue management feature to track and address software bugs, feature requests, and other project-related tasks.
 - API Extensibility
 
 ## Primary Components
@@ -72,6 +77,10 @@ LOGGING_LEVEL = 'INFO'  # Options: DEBUG, INFO, WARNING, ERROR, CRITICAL
 ```
 
 ## Usage
+
+### Contributing to Issue Management Optimization
+
+Contributions to the improvement and optimization of the issue management features are welcome! Please refer to our [Contributing Guide](CONTRIBUTING.md) for details on the process for submitting changes related to issue management.
 
 The main components of the project are the AI model, the assistant, and the thread. You can customize the AI model's characteristics, equip the assistant with tools, and initiate threads with initial messages to commence a conversation.
 
