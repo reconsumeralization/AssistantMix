@@ -31,7 +31,7 @@ To configure the recurring issue management system, modify the settings in the `
 To get started with the project, clone the repository and install the required dependencies.
 
 ```bash
-git clone https://github.com/your-repo/advanced-ai-development-ecosystem.git
+git clone https://github.com/reconsumeralization/AssistantMix/advanced-ai-development-ecosystem.git
 cd advanced-ai-development-ecosystem
 pip install -r requirements.txt
 ```
