@@ -28,6 +28,9 @@ CODE_REFACTORING_PLATFORM_INTEGRATED = True
 # UI Configuration
 UI_ENABLED = True
 
+# Feedback Configuration
+FEEDBACK_ENABLED = True  # Set to False to disable the feedback mechanism
+
 # Error Handling Configuration
 ERROR_HANDLING_METHOD = 'LOGGING'
 
